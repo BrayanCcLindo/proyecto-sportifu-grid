@@ -1,0 +1,26 @@
+:root {
+    --siderbarInlineSize: 15rem;
+    --minBlockSize: 37.5rem;
+    --minInlineSize: 48rem;
+    --bottomSize: 5.5rem;
+}
+
+.layout{
+    min-inline-size: var(--minInlineSize);
+    display: grid;
+    grid-template-columns: var(--siderbarInlineSize) 1fr;
+    grid-template-rows: 1fr var(--bottomSize);
+    block-size: 100vh;
+    grid-template-areas: "sidebar page" "footer footer";
+    
+}
+
+.layout .sidebar{
+    grid-area: sidebar;
+}
+.layout .page{
+    grid-area: page;
+}
+.layout footer{
+    grid-area: footer;
+}
